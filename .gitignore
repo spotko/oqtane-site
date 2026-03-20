@@ -1,0 +1,29 @@
+## .NET
+bin/
+obj/
+publish/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Visual Studio
+.vs/
+*.csproj.user
+
+## NuGet
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nupkg
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Oqtane data (local database)
+*.db
+*.db-shm
+*.db-wal

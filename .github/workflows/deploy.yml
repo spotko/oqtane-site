@@ -1,0 +1,35 @@
+name: Deploy to MonsterASP
+
+# Запускається при кожному push в main гілку
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+
+    steps:
+      # 1. Завантажити код з репозиторію
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Встановити .NET 10
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      # 3. Зібрати проєкт для публікації
+      - name: Publish
+        run: dotnet publish Server/OqtaneSite.Server.csproj -c Release -o ./publish
+
+      # 4. Завантажити на MonsterASP через FTP
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./publish/
+          server-dir: /site/wwwroot/
