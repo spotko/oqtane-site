@@ -25,7 +25,7 @@ jobs:
 
       # 3. Зібрати проєкт для публікації
       - name: Publish
-        run: dotnet publish Server/OqtaneSite.Server.csproj -c Release -r win-x64 --self-contained -o ./publish
+        run: dotnet publish Server/OqtaneSite.Server.csproj -c Release -r win-x86 --self-contained -o ./publish
 
       # 4. Покласти зібрані файли в гілку deploy
       - name: Deploy to deploy branch
