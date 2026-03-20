@@ -14,17 +14,17 @@ namespace Oqtane.Theme.Massively.Client
             PackageName = "Oqtane.Theme.Massively",
             Resources = new List<Resource>
             {
-                new Stylesheet("~/assets/css/fontawesome-all.min.css"),
-                new Stylesheet("~/assets/css/noscript.css"),
-                new Stylesheet("~/assets/css/main.css"),
-                new Script("~/assets/js/jquery.min.js"),
-                new Script("~/assets/js/jquery.scrollex.min.js"),
-                new Script("~/assets/js/jquery.scrolly.min.js"),
-                new Script("~/assets/js/browser.min.js"),
-                new Script("~/assets/js/breakpoints.min.js"),
-                new Script("~/assets/js/util.js"),
-                new Script("~/assets/js/main.js"),
-                new Script("~/assets/js/interop.js", "", "", ResourceLocation.Body, ResourceLoadBehavior.Always, null, null, null, RenderModes.Interactive)
+                new Stylesheet("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/css/fontawesome-all.min.css"),
+                new Stylesheet("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/css/noscript.css"),
+                new Stylesheet("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/css/main.css"),
+                new Script("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/js/jquery.min.js"),
+                new Script("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/js/jquery.scrollex.min.js"),
+                new Script("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/js/jquery.scrolly.min.js"),
+                new Script("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/js/browser.min.js"),
+                new Script("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/js/breakpoints.min.js"),
+                new Script("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/js/util.js"),
+                new Script("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/js/main.js"),
+                new Script("_content/Oqtane.Theme.Massively.Client.Oqtane/Themes/Oqtane.Theme.Massively/assets/js/interop.js", "", "", ResourceLocation.Body, ResourceLoadBehavior.Always, null, null, null, RenderModes.Interactive)
             }
         };
     }
