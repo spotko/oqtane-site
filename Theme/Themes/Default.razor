@@ -8,8 +8,9 @@
     @if (PageState.Page.Path == "" || PageState.Page.Path == "/")
     {
         <div id="intro">
-            <h1>@PageState.Site.Name</h1>
-            <p>@PageState.Page.Title</p>
+            <h1>dev<span style="font-weight:300">HELLO</span></h1>
+            <p>We build modern websites &amp; web applications<br />
+            that help your business grow online.</p>
             <ul class="actions">
                 <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
             </ul>
@@ -18,7 +19,7 @@
 
     <!-- Header -->
     <header id="header">
-        <a href="/" class="logo">@PageState.Site.Name</a>
+        <a href="/" class="logo">devHELLO</a>
     </header>
 
     <!-- Nav -->
@@ -39,13 +40,22 @@
 
     <!-- Footer -->
     <footer id="footer">
+        <section>
+            <h3>Get in Touch</h3>
+            <p>Have a project in mind? We'd love to hear from you.<br />
+            Drop us a line and let's build something great together.</p>
+        </section>
         <section class="split contact">
+            <section>
+                <h3>Email</h3>
+                <p><a href="mailto:hello@devhello.com">hello&#64;devhello.com</a></p>
+            </section>
             <section>
                 <h3>Social</h3>
                 <ul class="icons alt">
+                    <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
                     <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
                 </ul>
             </section>
         </section>
@@ -53,7 +63,7 @@
 
     <!-- Copyright -->
     <div id="copyright">
-        <ul><li>&copy; @PageState.Site.Name</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        <ul><li>&copy; @DateTime.Now.Year devHELLO</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
     </div>
 
 </div>
