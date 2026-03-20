@@ -1,4 +1,4 @@
-name: Deploy to MonsterASP
+name: Build and Deploy
 
 # Запускається при кожному push в main гілку
 on:
@@ -6,8 +6,8 @@ on:
     branches: [ main ]
 
 jobs:
-  deploy:
-    runs-on: windows-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
     steps:
       # 1. Завантажити код з репозиторію
@@ -24,12 +24,10 @@ jobs:
       - name: Publish
         run: dotnet publish Server/OqtaneSite.Server.csproj -c Release -o ./publish
 
-      # 4. Завантажити на MonsterASP через FTP
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      # 4. Покласти зібрані файли в гілку deploy
+      - name: Deploy to deploy branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./publish/
-          server-dir: /site/wwwroot/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./publish
+          publish_branch: deploy
