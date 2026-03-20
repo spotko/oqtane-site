@@ -27,3 +27,4 @@ Thumbs.db
 *.db
 *.db-shm
 *.db-wal
+Server/Content/

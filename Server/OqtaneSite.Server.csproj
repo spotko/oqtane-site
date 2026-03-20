@@ -30,6 +30,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Client\OqtaneSite.Client.csproj" />
     <ProjectReference Include="..\Shared\OqtaneSite.Shared.csproj" />
+    <ProjectReference Include="..\Theme\Oqtane.Theme.Massively.Client.csproj" />
   </ItemGroup>
 
   <ItemGroup>

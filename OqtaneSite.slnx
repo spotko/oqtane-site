@@ -2,4 +2,5 @@
   <Project Path="Server\OqtaneSite.Server.csproj" DefaultStartup="true" />
   <Project Path="Client\OqtaneSite.Client.csproj" />
   <Project Path="Shared\OqtaneSite.Shared.csproj" />
+  <Project Path="Theme\Oqtane.Theme.Massively.Client.csproj" />
 </Solution>

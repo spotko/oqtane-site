@@ -1,0 +1,17 @@
+@namespace Oqtane.Theme.Massively.Client
+@inherits ContainerBase
+
+<section class="post">
+    @if (!string.IsNullOrEmpty(ModuleState.Title) && ModuleState.Title != "-")
+    {
+        <header class="major">
+            <h2>@ModuleState.Title</h2>
+        </header>
+    }
+    <ModuleActions />
+    <ModuleInstance />
+</section>
+
+@code {
+    public override string Name => "Default";
+}
